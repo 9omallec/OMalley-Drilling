@@ -28,25 +28,69 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-darker);
+    background-image:
+        repeating-radial-gradient(circle at 15% 20%, transparent 0, transparent 60px, rgba(26, 92, 42, 0.08) 60px, rgba(26, 92, 42, 0.08) 62px),
+        repeating-radial-gradient(circle at 85% 70%, transparent 0, transparent 80px, rgba(125, 165, 124, 0.06) 80px, rgba(125, 165, 124, 0.06) 82px),
+        repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 100px, rgba(243, 156, 18, 0.04) 100px, rgba(243, 156, 18, 0.04) 102px),
+        repeating-radial-gradient(circle at 70% 30%, transparent 0, transparent 70px, rgba(26, 92, 42, 0.06) 70px, rgba(26, 92, 42, 0.06) 72px),
+        repeating-radial-gradient(circle at 30% 80%, transparent 0, transparent 90px, rgba(125, 165, 124, 0.05) 90px, rgba(125, 165, 124, 0.05) 92px),
+        radial-gradient(circle at 20% 50%, rgba(26, 92, 42, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(243, 156, 18, 0.02) 0%, transparent 50%);
+    background-attachment: fixed;
 }
 
 /* Header & Navigation */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #0f3d1a 100%);
+    background: linear-gradient(135deg,
+        #1a5c2a 0%,
+        #2a7a3f 25%,
+        #0f3d1a 50%,
+        #1a4d25 75%,
+        rgba(243, 156, 18, 0.15) 100%
+    );
     color: white;
     padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.5),
+        0 0 40px rgba(243, 156, 18, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     border-bottom: 3px solid var(--accent-color);
+    border-top: 1px solid rgba(243, 156, 18, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header-logo {
+    width: 100px;
+    height: auto;
+    border: 3px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: var(--transition);
+    margin-left: auto;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.5);
 }
 
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-weight: 700;
+}
+
+nav {
+    width: 100%;
+    margin-top: 1rem;
 }
 
 nav ul {
